@@ -2,3 +2,21 @@ header
 {
     background-color: aqua;
 }
+
+h1
+{
+    background-color: aqua;
+}
+nav
+{
+    height: 80px;
+    background-color: blue;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.p1{
+    min-height: 100vh;
+}
