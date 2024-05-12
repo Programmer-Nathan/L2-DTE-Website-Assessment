@@ -4,16 +4,6 @@
     box-sizing: border-box;
 }
 
-header
-{
-    background-color: aqua;
-}
-
-h1
-{
-    background-color: aqua;
-}
-
 html{
     scroll-behavior: smooth;
 }
@@ -22,76 +12,69 @@ html{
     min-height: 100vh;
 }
 
-nav:after{
-    content: '';
-    clear: both;
-    display: table;
+ul{
+    list-style: none; 
+}
+body{
+    font-size: 1rem;
+    line-height:1.6;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
-nav .logo{
-    float: left;
-    color:aqua;
-    font-size: 27px;
-    font-weight: 600;
-    line-height: 70px;
-    padding-left: 60px;
+nav{
+    padding: 2rem 0;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav ul{
-    float: right;
-    list-style: none;
-    margin-right: 40px;
+.logo{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-items > li, .menu > a{
+    display: inline-block;
+}
+
+.nav-items li{
     position: relative;
 }
 
-nav ul li{
-    float: left;
-    display: block;
-    margin: 0 5px;
-}
-
-nav ul li a{
+.nav-items a {
     text-decoration: none;
-    line-height: 70px;
-    font-size: 18px;
-    padding: 8px 15px;
+    display: block;
+    padding: 10px 1.5rem;
+    transition: color .22s ease;
+    color: black;
 }
 
-nav ul li a:hover{
+.nav-items a:hover{
     color: cyan;
-    border-radius: 5px;
 }
 
-nav ul ul li a:hover{
-    color: cyan;
-    box-sizing: none;
-
-}
-
-nav ul ul{
+.submenu{
     position: absolute;
-    top: 90px;
-    opacity: 0;
-    visibility: hidden;
-    transition: top .3s;
+    width: 140px;
+    left: 0;
+    display: none;
 }
 
-nav ul li:hover > ul{
-    color: cyan;
-    top: 70px;
-    opacity: 1;
-    visibility: visible;
+.nav-items li:hover > .submenu{
+    display: block;
+    animation: slideup .3s ease;
 }
 
-nav ul ul li{
-    position: relative;
-    margin: 0px;
-    width: 150px;
-    float: none;
-    display: list-item;
-    border-bottom: 1px solid rgba(0,0,0,0,.3);
-}
+@keyframes slideup{
+    0% {
+        opacity: 0;
+        transform: translateY(18px);
+    }
 
-nav ul ul li{
-    line-height: 50px;
+    100% {
+        opacity: 1;
+        transform: none;
+    }
 }
