@@ -1,31 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <script defer src="main.js"></script>
-    <title>Responsive Navbar</title>
+<!DOCTYPE html> 
+<!--!Doctype tells the browser what document type to expect (HTML 5)-->
+<html lang="en"> 
+<!--The <html> tag represents the root of an HTMl document and is the container of all HTML documents-->
+<head> 
+  <!--The <head> element is a metadata container for information about the HTML document and is not displayed-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Travel website</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <!--The <link> tag specifies a relationship with the document and an external source-->
+  <link rel="stylesheet" href="css/style.css">
+  <!--href, or hyperlink reference is a reference to a destination that the browser can use. In this case it is a style sheet CSS file-->
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <!--The src or source element embeds the resource into the document-->
+  <script defer src="main.js"></script>
+  <!--The <script> tag is used to embed executable data. In this case it is a JavaScript files-->
 </head>
 <body>
+  <!--The <body> tag defines the body of the document and contains all the contents of the HTMl document-->
   <header>
-    <div class="container">     
+    <!--A <header> element represents a container for introductionary content-->
+    <div class="container"> 
+      <!--A <div> tag defines a division/section of an HTMl document-->  
+      <!--Class elements allow CSS and JavaScript code to select and access specific elements through the class-->  
       <div class="logo-container">
         <h3 class="logo">Brand<span>Name</span></h3>
       </div>
       <div class="nav-btn">
         <div class="nav-links">
           <ul>
+            <!--A <ul> tag is an unordered list of items and usually displayed as a bulleted list-->
             <li class="nav-link" style="--i: .6s"><a href="#">Home</a></li>
+            <!--A <li> tag defines a list item and is used inside a ordered or unordered list-->
             <li class="nav-link" style="--i: .85s"><a href="#">Explore<i class="fas fa-caret-down"></i></a>
               <div class="dropdown">
                 <ul>
-                  <li class="dropdown-link"><a href="#">Link 1</a></li>
-                  <li class="dropdown-link"><a href="#">Link 2</a></li>
-                  <li class="dropdown-link"><a href="#">Link 3</a></li>
-                  <li class="dropdown-link"><a href="#">Link 4</a></li>  
+                  <li class="dropdown-link"><a href="html/australia.html">Australia</a></li>
+                  <!--An <a> tag is an anchor element that is used to link webpages together-->
+                  <li class="dropdown-link"><a href="html/cambodia.html">Cambodia</a></li>
+                  <li class="dropdown-link"><a href="html/china.html">China</a></li>
+                  <li class="dropdown-link"><a href="html/fiji.html">Fiji</a></li> 
+                  <li class="dropdown-link"><a href="html/rarotonga.html">Rarotonga</a></li>  
+                  <li class="dropdown-link"><a href="html/singapore.html">Singapore</a></li>  
+                  <li class="dropdown-link"><a href="html/vietnam.html">Vietnam</a></li>  
                 </ul>
                 <div class="arrow"></div>
               </div>
@@ -35,12 +53,16 @@
       </div>
     </div>
   </header>
-  <section id="page1">
-      [Insert text here:]
-      <img src="images/singapore.jpg" alt="Singapore">
-  </section>
+  <div class="wrapper">
+    <section>
+      <!--A <section> element is a structural element used to group similar elements together-->
+      <img src="images/Singapore-marina-bay.jpg" alt="Singapore Marina Bay Sands" class="background">
+      <h1 class="title">Singapore</h1>
+      <h1 class="subtext">A website about travel</h1>
+    </section> 
+    </div> 
+  </div>
   <section class="hidden">
-      [Insert more text here:]
   </section>
 </body>
 </html>

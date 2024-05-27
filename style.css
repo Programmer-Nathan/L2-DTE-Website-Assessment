@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -9,6 +10,10 @@ html {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
 }
 
 ul{
@@ -55,7 +60,7 @@ header{
 }
 
 .logo{
-    color: black;
+    color: #46494c;
     font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: 2px;
@@ -68,17 +73,50 @@ header{
     font-weight: 300;
 }
 
-section {
-    padding: 6rem 2rem;
-    height: 2000px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 900px;
-    font-size: 80px;
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
 }
 
-img {
-    border-radius: 10px;
-    width: 70%;
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.background {
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transform: translateZ(-10px) scale(2);
+}
+
+.title {
+    font-family: 'Merriweather', sans-serif;
+    color: white;
+    font-size: 6rem;
+    font-weight: 800;
+    position: absolute;
+    top: 15rem;
+    left: 40px;
+}
+
+.subtext {
+    font-family: 'Merriweather', sans-serif;
+    color: white;
+    font-size: 2rem;
+    font-weight: 200;
+    position: absolute;
+    top: 30rem;
+    left: 45px;
 }
 
 .nav-links > ul{
@@ -93,7 +131,7 @@ img {
 
 .nav-link > a{
     line-height: 3rem;
-    color: black;
+    color: #46494c;
     padding: 1rem .8rem;
     letter-spacing: 1px;
     font-size: .95rem;
@@ -108,7 +146,7 @@ img {
 }
 
 .nav-link:hover > a{
-    color: grey;
+    color: #1985a1;
     transition: .3s ease
 }
 
@@ -129,7 +167,7 @@ img {
 
 .dropdown-link > a {
     display: flex;
-    color: black;
+    color: #46494c;
     background-color: white;
     padding: .5rem 1rem;
     font-size: .9rem;
@@ -141,7 +179,7 @@ img {
 }
 
 .dropdown-link:hover > a{
-    color: grey;
+    color: #1985a1;
 }
 
 .dropdown-link:first-of-type > a{
