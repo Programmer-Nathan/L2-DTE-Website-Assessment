@@ -20,7 +20,7 @@
 <body>
   <!--The <body> tag defines the body of the document and contains all the contents of the HTMl document-->
   <header>
-    <!--A <header> element represents a container for introductionary content-->
+    <!--A <header> element represents a container for introductionary content. My header will include the navigational bar-->
     <div class="container"> 
       <!--A <div> tag defines a division/section of an HTMl document-->  
       <!--Class elements allow CSS and JavaScript code to select and access specific elements through the class-->  
@@ -33,8 +33,9 @@
             <!--A <ul> tag is an unordered list of items and usually displayed as a bulleted list-->
             <li class="nav-link" style="--i: .6s"><a href="#">Home</a></li>
             <!--A <li> tag defines a list item and is used inside a ordered or unordered list-->
-            <li class="nav-link" style="--i: .85s"><a href="#">Explore<i class="fas fa-caret-down"></i></a>
+            <li class="nav-link" style="--i: .85s"><a href="#page2">Explore<i class="fas fa-caret-down"></i></a>
               <div class="dropdown">
+                <!--Below are elements of an unordered list of the Explore item that will show on hover-->
                 <ul>
                   <li class="dropdown-link"><a href="html/australia.html">Australia</a></li>
                   <!--An <a> tag is an anchor element that is used to link webpages together-->
@@ -54,15 +55,63 @@
     </div>
   </header>
   <div class="wrapper">
-    <section>
+    <div class="s1">
       <!--A <section> element is a structural element used to group similar elements together-->
-      <img src="images/Singapore-marina-bay.jpg" alt="Singapore Marina Bay Sands" class="background">
-      <h1 class="title">Singapore</h1>
-      <h1 class="subtext">A website about travel</h1>
-    </section> 
+      <img src="images/Singapore-Marina-Bay-Sands.jpg" alt="Singapore Marina Bay Sands" class="background">
+      <h1 class="title">Traveling Around The World</h1>
+      <h2 class="subtext">A website about travel</h2>
     </div> 
+    <section class="card-list" id="page2">
+
+       <article class="card">
+        <div class="card-header">
+          <h2>Country 1</h2>
+        </div>
+       </article>
+
+       <article class="card">
+        <div class="card-header">
+          <h2>Country 2</h2>
+        </div>
+       </article>
+
+       <article class="card">
+        <div class="card-header">
+          <h2>Country 3</h2>
+        </div>
+       </article>
+
+       <article class="card">
+        <div class="card-header">
+          <h2>Country 4</h2>
+        </div>
+       </article>
+
+       <article class="card">
+        <div class="card-header">
+          <h2>Country 5</h2>
+        </div>
+       </article>
+
+       <article class="card">
+        <div class="card-header">
+          <h2>Country 6</h2>
+        </div>
+       </article>
+
+       <article class="card">
+        <div class="card-header">
+          <h2>Country 7</h2>
+        </div>
+       </article>
+
+       <article class="card">
+        <div class="card-header">
+          <h2>Country 8</h2>
+        </div>
+       </article>
+    </section>
   </div>
-  <section class="hidden">
-  </section>
+
 </body>
 </html>
