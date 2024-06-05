@@ -8,6 +8,34 @@
     src: url(fonts/GeistMono-Bold.ttf);
 }
 
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(21,21,25);
+    margin: 0rem;
+    overflow: hidden;
+  }
+  
+  #image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%); 
+    user-select: none; /* -- Prevent image highlighting -- */
+  }
+  
+  #image-track > .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+    cursor: pointer;
+  }
+  
+
+
 * {
     padding: 0;
     margin: 0;
@@ -16,11 +44,6 @@
 }
 /*The asterisk is the universal CSS selector that selects all items in the HTML file*/
 /*The scroll-bevior element set to smooth so page scroll transitions with button clicks are smooth*/
-
-body {
-    overflow: hidden;
-    margin: 0;
-}
 
 ul{
     list-style: none;
@@ -34,12 +57,8 @@ header{
     font-family: 'Inter', sans-serif;
     position: fixed;
     top: 0px;
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
     width: 100%;
     z-index: 1000;
-    border-top: 1px solid #46494c;
-    border-bottom: 1px solid #46494c;
 }
 /*This styling will apply for the header elements. In this case the navigation bar*/
 
@@ -68,65 +87,17 @@ header{
 }
 
 .logo{
-    color: rgb(21 21 25);
+    color: white;
     font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
     line-height: 2rem;
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 
 .logo span{
     font-weight: 300;
-}
-
-.wrapper {
-    height: 120vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    perspective: 10px;
-}
-
-.s1 {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    transform-style: preserve-3d;
-    z-index: -1;
-}
-
-.background {
-    position: relative;
-    object-fit: cover;
-    height: 120%;
-    width: 100%;
-    z-index: -1;
-    transform: translateZ(-10px) scale(2);
-}
-/*The background picture is translated backwards (-10px)on the Z axis, and has a scale of 2 to make the picture fill the screen*/
-/*This makes the illusion that the background is further back, and creates a parralax effect where the foreground text will scroll faster than the background*/
-
-.title {
-    font-family: 'GeistMono', sans-serif;
-    color: white;
-    font-size: 4.5rem;
-    font-weight: 600;
-    position: absolute;
-    top: 20rem;
-    left: 60px;
-}
-
-.subtext {
-    font-family: 'Inter', sans-serif;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 200;
-    position: absolute;
-    top: 28rem;
-    left: 65px;
 }
 
 .nav-links > ul{
@@ -142,8 +113,8 @@ header{
 .nav-link > a{
     line-height: 2rem;
     font-weight: 500;
-    color: rgb(21 21 25);
-    padding: 1rem .8rem;
+    color: white;
+    padding: 2rem .8rem;
     letter-spacing: 1px;
     font-size: .88rem;
     display: flex;
@@ -219,7 +190,7 @@ header{
     left: 32px;
     border-top: 1px solid rgb(230, 229, 229);
     border-left: 1px solid rgb(230, 229, 229);
-    background-color: #fff;
+    background-color: rgb(21 21 25);
     transform: rotate(45deg);
     cursor: pointer;
     transition: .3s;
@@ -235,86 +206,4 @@ header{
     transform: translate(0, 0);
     opacity: 1;
     pointer-events: auto;
-}
-
-.card-list {
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    display: flex;
-    bottom: -4rem;
-    background-color: rgb(21 21 25);
-    padding: 10rem 6.8rem;
-    overflow-x: scroll;
-    justify-content: space-between;
-}
-
-.card {
-    height: 400px;
-    width: 300px;
-    min-width: 250px;
-    padding: 1.5rem;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: -1rem 0 3rem #000;
-    display: flex;
-    flex-direction: column;
-    transition: .2s;
-    margin: 0;
-    scroll-snap-align: start;
-    clear: both;
-    position: relative;
-}
-
-.card:focus-within~.card, .card:hover~.card {
-    transform: translateX(10px);
-}
-
-.card:hover {
-    transform: translateY(-1rem);
-}
-
-.card:not(:first-child) {
-    margin-left: -10px;
-}
-
-@keyframes slideup{
-    0% {
-        opacity: 0;
-        transform: translateY(-18px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: none;
-    }
-}
-
-@keyframes slidedown{
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(18px);
-    }
-}
-
-@keyframes slide-left {
-    from {
-        transform: translateX(-55px);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes slide-right {
-    from {
-        transform: translateX(55px);
-    }
-    to {
-        transform: translateX(0);
-    }
 }
