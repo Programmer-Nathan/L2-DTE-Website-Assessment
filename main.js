@@ -7,8 +7,8 @@ const handleOnUp = () => {
   track.dataset.mouseDownAt = "0";  
   track.dataset.prevPercentage = track.dataset.percentage;
   /*
-   When the mouse button is released, the position will reset back to 0
-  The percentage slid is stored in thsi variable to use if the track is scrolled again
+    When the mouse button is released, the position will reset back to 0
+    The percentage slid is stored in thsi variable to use if the track is scrolled again
   */
 }
 
@@ -94,4 +94,23 @@ button4.addEventListener('click', ()=>{
 /* 
   These lines are event listeners that are individually assigned to each image
   When the images are clicked, the event listener will redirect the browser to the new adress of the HTML file of the country
+*/
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry)
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show')
+    } 
+  });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el))
+
+/*
+  This part of the code is an intersection oberserver
+  An intersection observer detects when an element, in this case, all elements with the class 'hidden' are visible on screen
+  It then targets these elements and adds the 'show' class
+  Any elements with this 'show' class are animated with a transition
 */

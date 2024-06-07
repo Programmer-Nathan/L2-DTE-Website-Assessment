@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Travel website</title>
+  <title>Travel Journal</title>
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <!--The <link> tag specifies a relationship with the document and an external source-->
   <link rel="stylesheet" href="css/style.css">
@@ -25,15 +25,15 @@
       <!--A <div> tag defines a division/section of an HTMl document-->  
       <!--Class elements allow CSS and JavaScript code to select and access specific elements through the class-->  
       <div class="logo-container">
-        <h3 class="logo">Brand<span>Name</span></h3>
+        <h3 class="logo hidden">Brand<span>Name</span></h3>
       </div>
       <div class="nav-btn">
         <div class="nav-links">
           <ul>
             <!--A <ul> tag is an unordered list of items and usually displayed as a bulleted list-->
-            <li class="nav-link" style="--i: .6s"><a href="#">Home</a></li>
+            <li class="nav-link hidden" style="--i: .6s"><a href="#">Home</a></li>
             <!--A <li> tag defines a list item and is used inside a ordered or unordered list-->
-            <li class="nav-link" style="--i: .85s"><a href="#page2">Explore<i class="fas fa-caret-down"></i></a>
+            <li class="nav-link hidden" style="--i: .85s"><a href="#page2">Explore<i class="fas fa-caret-down"></i></a>
               <div class="dropdown">
                 <!--Below are elements of an unordered list of the Explore item that will show on hover-->
                 <ul>
@@ -57,14 +57,15 @@
   <!--Below is a div which contains a list of image elements that can be styled in CSS and made functional in JavaScript-->
   <!--The main function of this track is that the image perspective moves depending on where the user is on the screen, giving the illusion of looking through a window-->
   <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-      <img class="image" id="a" src="https://images.unsplash.com/photo-1580437785988-b7d807224f22?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
-      <img class="image" id="b" src="https://images.unsplash.com/photo-1483070472046-4defb528eff3?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
-      <img class="image" id="c" src="https://images.unsplash.com/photo-1583102034473-56fc10ca3cf2?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
+      <img class="image hidden" id="a" src="https://images.unsplash.com/photo-1580437785988-b7d807224f22?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
+      <img class="image hidden" id="b" src="https://images.unsplash.com/photo-1483070472046-4defb528eff3?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
+      <img class="image hidden" id="c" src="https://images.unsplash.com/photo-1583102034473-56fc10ca3cf2?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
       <img class="image" id="d" src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
       <img class="image" src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
       <img class="image" src="https://images.unsplash.com/photo-1552203274-e3c7bd771d26?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
       <img class="image" src="https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
       <img class="image" src="https://images.unsplash.com/photo-1582761371078-6509f13666b1?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
+      <!--Draggable is set to false to ensure that the images can be scrolled and not dragged-->
     </div>
 </body>
 </html>

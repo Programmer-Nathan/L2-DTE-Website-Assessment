@@ -7,6 +7,10 @@
     font-family: "GeistMono";
     src: url(fonts/GeistMono-Bold.ttf);
 }
+/* 
+    Importing different fonts
+    Top fonts are from the Google font API and the @font-face is a downloaded font which I put in the fonts folder
+*/
 
 body {
     height: 100vh;
@@ -34,8 +38,6 @@ body {
     cursor: pointer;
   }
   
-
-
 * {
     padding: 0;
     margin: 0;
@@ -45,11 +47,11 @@ body {
 /*The asterisk is the universal CSS selector that selects all items in the HTML file*/
 /*The scroll-bevior element set to smooth so page scroll transitions with button clicks are smooth*/
 
-ul{
+ul {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -206,4 +208,31 @@ header{
     transform: translate(0, 0);
     opacity: 1;
     pointer-events: auto;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1.25s;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+/* The @media element with 'prefers-reduced-motion' disables the transition for anyone who does not want animations*/
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.image:nth-child(2) {
+    transition-delay: 80ms;
+}
+
+.image:nth-child(1) {
+    transition-delay: 120ms;
 }
