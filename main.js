@@ -67,28 +67,52 @@ window.ontouchmove = e => handleOnMove(e.touches[0]);
 
 // These lines detect touch events for mobile and touchscreen devices
 
-const button = document.getElementById('a');
+const button = document.getElementById('australia');
 
 button.addEventListener('click', ()=>{
-  window.location.href = 'html/singapore.html';
+  window.location.href = 'html/australia.html';
 })
 
-const button2 = document.getElementById('b');
+const button2 = document.getElementById('cambodia');
 
 button2.addEventListener('click', ()=>{
-  window.location.href = 'html/singapore.html';
+  window.location.href = 'html/cambodia.html';
 })
 
-const button3 = document.getElementById('c');
+const button3 = document.getElementById('china');
 
 button3.addEventListener('click', ()=>{
+  window.location.href = 'html/china.html';
+})
+
+const button4 = document.getElementById('fiji');
+
+button4.addEventListener('click', ()=>{
+  window.location.href = 'html/fiji.html';
+})
+
+const button5 = document.getElementById('newzealand');
+
+button5.addEventListener('click', ()=>{
+  window.location.href = 'html/newzealand.html';
+})
+
+const button6 = document.getElementById('rarotonga');
+
+button6.addEventListener('click', ()=>{
+  window.location.href = 'html/rarotonga.html';
+})
+
+const button7 = document.getElementById('singapore');
+
+button7.addEventListener('click', ()=>{
   window.location.href = 'html/singapore.html';
 })
 
-const button4 = document.getElementById('d');
+const button8 = document.getElementById('vietnam');
 
-button4.addEventListener('click', ()=>{
-  window.location.href = 'html/singapore.html';
+button8.addEventListener('click', ()=>{
+  window.location.href = 'html/vietnam.html';
 })
 
 /* 

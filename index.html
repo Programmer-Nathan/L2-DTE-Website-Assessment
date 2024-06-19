@@ -12,7 +12,7 @@
   <!--The <link> tag specifies a relationship with the document and an external source-->
   <link rel="stylesheet" href="css/style.css">
   <!--href, or hyperlink reference is a reference to a destination that the browser can use. In this case it is a style sheet CSS file-->
-  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/77cbd3e2ff.js" crossorigin="anonymous"></script>
   <!--The src or source element embeds the resource into the document-->
   <script defer src="main.js"></script>
   <!--The <script> tag is used to embed executable data. In this case it is a JavaScript files-->
@@ -31,7 +31,7 @@
         <div class="nav-links">
           <ul>
             <!--A <ul> tag is an unordered list of items and usually displayed as a bulleted list-->
-            <li class="nav-link hidden" style="--i: .6s"><a href="#">Home</a></li>
+            <li class="nav-link hidden" style="--i: .6s"><a href="#">Home<i class="fa-solid fa-house"></i></a></li>
             <!--A <li> tag defines a list item and is used inside a ordered or unordered list-->
             <li class="nav-link hidden" style="--i: .85s"><a href="#page2">Explore<i class="fas fa-caret-down"></i></a>
               <div class="dropdown">
@@ -42,6 +42,7 @@
                   <li class="dropdown-link"><a href="html/cambodia.html">Cambodia</a></li>
                   <li class="dropdown-link"><a href="html/china.html">China</a></li>
                   <li class="dropdown-link"><a href="html/fiji.html">Fiji</a></li> 
+                  <li class="dropdown-link"><a href="html/newzealand.html">New Zealand</a></li> 
                   <li class="dropdown-link"><a href="html/rarotonga.html">Rarotonga</a></li>  
                   <li class="dropdown-link"><a href="html/singapore.html">Singapore</a></li>  
                   <li class="dropdown-link"><a href="html/vietnam.html">Vietnam</a></li>  
@@ -57,14 +58,14 @@
   <!--Below is a div which contains a list of image elements that can be styled in CSS and made functional in JavaScript-->
   <!--The main function of this track is that the image perspective moves depending on where the user is on the screen, giving the illusion of looking through a window-->
   <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-      <img class="image hidden" id="a" src="https://images.unsplash.com/photo-1580437785988-b7d807224f22?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
-      <img class="image hidden" id="b" src="https://images.unsplash.com/photo-1483070472046-4defb528eff3?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
-      <img class="image hidden" id="c" src="https://images.unsplash.com/photo-1583102034473-56fc10ca3cf2?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
-      <img class="image" id="d" src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
-      <img class="image" src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
-      <img class="image" src="https://images.unsplash.com/photo-1552203274-e3c7bd771d26?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
-      <img class="image" src="https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
-      <img class="image" src="https://images.unsplash.com/photo-1582761371078-6509f13666b1?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
+      <img class="image hidden" id="australia" src="https://images.unsplash.com/photo-1580437785988-b7d807224f22?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
+      <img class="image hidden" id="cambodia" src="https://images.unsplash.com/photo-1483070472046-4defb528eff3?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
+      <img class="image hidden" id="china" src="https://images.unsplash.com/photo-1583102034473-56fc10ca3cf2?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
+      <img class="image" id="fiji" src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
+      <img class="image" id="newzealand" src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
+      <img class="image" id="rarotonga" src="https://images.unsplash.com/photo-1552203274-e3c7bd771d26?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
+      <img class="image" id="singapore" src="https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
+      <img class="image" id="vietnam" src="https://images.unsplash.com/photo-1582761371078-6509f13666b1?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false" />
       <!--Draggable is set to false to ensure that the images can be scrolled and not dragged-->
     </div>
 </body>
