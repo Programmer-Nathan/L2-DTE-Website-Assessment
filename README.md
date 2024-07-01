@@ -2,11 +2,11 @@
 
 I will be using this README file to add and store notes and also to display important information about my website.
 
-Project title: 
+Project title: Travel Journal
 
 Project discription: The website will be an informative/log website of all the countries me and my family have traveled to.
 
-How to Install and Run the project:
+How to Install and Run the project: Press the green code button in the Github repository, and then click download ZIP at the bottom of the dropdown menu.
 
 How to use project:
 
