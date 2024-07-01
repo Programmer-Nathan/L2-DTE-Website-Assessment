@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/testing.css">
+  <script src="https://kit.fontawesome.com/77cbd3e2ff.js" crossorigin="anonymous"></script>
+  <script defer src="/cool.js"></script>
+</head>
+<body>
+    <header>
+        <!--A <header> element represents a container for introductionary content. My header will include the navigational bar-->
+        <div class="container"> 
+          <!--A <div> tag defines a division/section of an HTMl document-->  
+          <!--Class elements allow CSS and JavaScript code to select and access specific elements through the class-->  
+          <div class="logo-container">
+            <h3 class="logo hidden">Brand<span>Name</span></h3>
+          </div>
+          <div class="nav-btn">
+            <div class="nav-links">
+              <ul>
+                <!--A <ul> tag is an unordered list of items and usually displayed as a bulleted list-->
+                <li class="nav-link hidden" style="--i: .6s"><a href="/index.html">Home<i class="fa-solid fa-house"></i></a></li>
+                <!--A <li> tag defines a list item and is used inside a ordered or unordered list-->
+                <li class="nav-link hidden" style="--i: .85s"><a href="#page2">Explore<i class="fas fa-caret-down"></i></a>
+                  <div class="dropdown">
+                    <!--Below are elements of an unordered list of the Explore item that will show on hover-->
+                    <ul>
+                      <li class="dropdown-link"><a href="australia.html">Australia</a></li>
+                      <!--An <a> tag is an anchor element that is used to link webpages together-->
+                      <li class="dropdown-link"><a href="cambodia.html">Cambodia</a></li>
+                      <li class="dropdown-link"><a href="china.html">China</a></li>
+                      <li class="dropdown-link"><a href="fiji.html">Fiji</a></li> 
+                      <li class="dropdown-link"><a href="newzealand.html">New Zealand</a></li> 
+                      <li class="dropdown-link"><a href="rarotonga.html">Rarotonga</a></li>  
+                      <li class="dropdown-link"><a href="singapore.html">Singapore</a></li>  
+                      <li class="dropdown-link"><a href="vietnam.html">Vietnam</a></li>  
+                    </ul>
+                    <div class="arrow"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </header>
+    <div class="site-header">
+
+        <div class="site-header-mask">
+          <h1 class="site-title hidden">New Zealand</h1>
+          <h1 class="subtext hidden">Oceania</h1>
+        </div>
+      
+    </div>
+      
+      <main>
+          <div class="card-list" id="page2">
+            <article class="card hidden">
+             <img class="image" id="australia" src="https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?q=80&w=2666&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A picture of the Gold Coast cityscape in Australia" draggable="false" /> 
+             <div class="card-header">
+               <h2>Country 1</h2>
+             </div>
+            </article>
+     
+            <article class="card hidden">
+              <img class="image" id="australia" src="https://images.unsplash.com/photo-1578172227805-19366ded4c57?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A picture of the Gold Coast cityscape in Australia" draggable="false" />
+             <div class="card-header">
+               <h2>Country 2</h2>
+             </div>
+            </article>
+     
+            <article class="card hidden">
+             <div class="card-header">
+               <h2>Country 3</h2>
+             </div>
+            </article>
+     
+            <article class="card hidden">
+             <div class="card-header">
+               <h2>Country 4</h2>
+             </div>
+            </article>
+     
+            <article class="card hidden">
+             <div class="card-header">
+               <h2>Country 5</h2>
+             </div>
+            </article>
+
+            <article class="card hidden">
+              <div class="card-header">
+                <h2>Country 6</h2>
+              </div>
+             </article>
+         </div>
+      </main>
+</body>
+</html>
