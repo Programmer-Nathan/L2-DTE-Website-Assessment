@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@font-face {
+    font-family: "GeistMono";
+    src: url(fonts/GeistMono-Bold.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/*The asterisk is the universal CSS selector that selects all items in the HTML file*/
+/*The scroll-bevior element set to smooth so page scroll transitions with button clicks are smooth*/
+
+body {
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    font-family: 'Inter', sans-serif;
+    position: fixed;
+    top: 0px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    z-index: 1000;
+    border-top: 1px solid #46494c;
+    border-bottom: 1px solid #46494c;
+}
+/*This styling will apply for the header elements. In this case the navigation bar*/
+
+.container{
+    max-width: 65rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+/*Container div in set to display flex, which creates a flexbox, meaning elements inside the container resize to fit the available space of the window*/
+
+.logo-container{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.nav-btn{
+    flex: 3;
+    display: flex;
+}
+
+.nav-links{
+    flex: 2;
+}
+
+.logo{
+    color: rgb(21 21 25);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 2rem;
+    padding: 1rem 0;
+}
+
+.logo span{
+    font-weight: 300;
+}
+
+/*The background picture is translated backwards (-10px)on the Z axis, and has a scale of 2 to make the picture fill the screen*/
+/*This makes the illusion that the background is further back, and creates a parralax effect where the foreground text will scroll faster than the background*/
+
+
+
+.nav-links > ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-link{
+    position: relative;
+}
+
+.nav-link > a{
+    line-height: 2rem;
+    font-weight: 500;
+    color: rgb(21 21 25);
+    padding: 1rem .8rem;
+    letter-spacing: 1px;
+    font-size: .88rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .5s;
+}
+/*All anchor atribute children of the nav-link class recieve this styling*/
+
+.nav-link > a > i{
+    margin-left: .2rem;
+}
+
+.nav-link:hover > a{
+    color: #1985a1;
+    transition: .3s ease
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 7.5rem;
+    transform: translateY(10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.dropdown ul {
+    position: relative;
+}
+/*The position of the unordered list of the dropdown class is relative to Explore button*/
+
+.dropdown-link > a {
+    display: flex;
+    color: rgb(21 21 25);
+    background-color: white;
+    padding: .5rem 1rem;
+    font-size: .85rem;
+    font-weight: 400;
+    align-items: center;
+    justify-content: space-between;
+    transition: .3s;
+    border-left: 1px solid rgb(230, 229, 229);;
+    border-right: 1px solid rgb(230, 229, 229);;
+}
+
+.dropdown-link:hover > a{
+    color: #1985a1;
+}
+/*For all anchor children of the dropdown link class on hover will change colour*/
+
+.dropdown-link:first-of-type > a{
+    border-radius: 10px 10px 0px 0px;
+    border-top: 1px solid rgb(230, 229, 229);;
+  }
+  
+  .dropdown-link:last-of-type > a{
+    border-bottom: 1px solid rgb(230, 229, 229);;
+    border-radius: 0px 0px 10px 10px;
+  }
+
+.dropdown-link i{
+    transform: rotate(-90deg);
+}
+
+.arrow{
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: -5.5px;
+    left: 32px;
+    border-top: 1px solid rgb(230, 229, 229);
+    border-left: 1px solid rgb(230, 229, 229);
+    background-color: #fff;
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: .3s;
+    z-index: -1;
+}
+
+.dropdown-link{
+    position: relative;
+}
+
+.nav-link:hover > .dropdown,
+.dropdown-link:hover > .dropdown{
+    transform: translate(0, 0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+main {
+    background-color: rgb(21 21 25);
+}
+
+.even-columns {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.site-header {
+  background-image: url("https://images.unsplash.com/photo-1580437785988-b7d807224f22?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: bottom;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  padding: 5rem;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.site-title {
+    font-family: 'GeistMono', sans-serif;
+    color: white;
+    font-size: 4.5rem;
+    font-weight: 600;
+    position: absolute;
+    top: 20rem;
+    left: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    .site-title {
+        font-size: 3.5rem;
+    }
+}
+
+.subtext {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 200;
+    position: absolute;
+    top: 28rem;
+    left: 50px;
+}
+
+.card-list {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    display: flex;
+    bottom: -4rem;
+    background-color: rgb(21 21 25);
+    padding: 10rem 14rem;
+    overflow-x: scroll;
+    justify-content: flex-start;
+}
+
+.card {
+    height: 480px;
+    width: 350px;
+    min-width: 350px;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: -1rem 0 3rem #000;
+    display: flex;
+    flex-direction: column;
+    transition: .2s;
+    margin: 0;
+    scroll-snap-align: start;
+    clear: both;
+    position: relative;
+}
+
+.card:focus-within~.card, .card:hover~.card {
+    transform: translateX(10px);
+}
+
+.card:hover {
+    transform: translateY(-1rem);
+}
+
+.card:first-of-type{
+    margin-left: 0rem;
+}
+
+.card:last-of-type{
+    margin-right: 6rem;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-10%);
+    transition: all 1.25s;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.image {
+    height: 200px;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+/* The @media element with 'prefers-reduced-motion' disables the transition for anyone who does not want animations*/
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.card:nth-child(1) {
+    transition-delay: 160ms;
+}
+
+.card:nth-child(2) {
+    transition-delay: 120ms;
+}
+
+.card:nth-child(3) {
+    transition-delay: 80ms;
+}
+
+.card:nth-child(4) {
+    transition-delay: 40ms;
+}
+
+.card:nth-child(5) {
+    transition-delay: 40ms;
+}

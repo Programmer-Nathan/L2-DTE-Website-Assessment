@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@font-face {
+    font-family: "GeistMono";
+    src: url(fonts/GeistMono-Bold.ttf);
+}
+/* 
+    Importing different fonts
+    Top fonts are from the Google font API and the @font-face is a downloaded font which I put in the fonts folder
+*/
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(21,21,25);
+    margin: 0rem;
+    overflow: hidden;
+  }
+  
+  #image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%); 
+    user-select: none; /* -- Prevent image highlighting -- */
+  }
+  
+  #image-track > .image {
+    max-width: 40vmin;
+    max-height: 56vmin;
+    min-width: 40vmin;
+    min-height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+    cursor: pointer;
+  }
+  
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/*The asterisk is the universal CSS selector that selects all items in the HTML file*/
+/*The scroll-bevior element set to smooth so page scroll transitions with button clicks are smooth*/
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header{
+    font-family: 'Inter', sans-serif;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1000;
+}
+/*This styling will apply for the header elements. In this case the navigation bar*/
+
+.container{
+    max-width: 65rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+/*Container div in set to display flex, which creates a flexbox, meaning elements inside the container resize to fit the available space of the window*/
+
+.logo-container{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.nav-btn{
+    flex: 3;
+    display: flex;
+}
+
+.nav-links{
+    flex: 2;
+}
+
+.logo{
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 2rem;
+    padding: 2rem 0;
+}
+
+.logo span{
+    font-weight: 300;
+}
+
+.nav-links > ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-link{
+    position: relative;
+}
+
+.nav-link > a{
+    line-height: 2rem;
+    font-weight: 500;
+    color: white;
+    padding: 2rem .8rem;
+    letter-spacing: 1px;
+    font-size: .88rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .5s;
+}
+/*All anchor atribute children of the nav-link class recieve this styling*/
+
+.nav-link > a > i{
+    margin-left: .2rem;
+}
+
+.nav-link:hover > a{
+    color: #1985a1;
+    transition: .3s ease
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 7.5rem;
+    transform: translateY(10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.dropdown ul {
+    position: relative;
+}
+/*The position of the unordered list of the dropdown class is relative to Explore button*/
+
+.dropdown-link > a {
+    display: flex;
+    color: rgb(21 21 25);
+    background-color: white;
+    padding: .5rem 1rem;
+    font-size: .85rem;
+    font-weight: 400;
+    align-items: center;
+    justify-content: space-between;
+    transition: .3s;
+}
+
+.dropdown-link:hover > a{
+    color: #1985a1;
+}
+/*For all anchor children of the dropdown link class on hover will change colour*/
+
+.dropdown-link:first-of-type > a{
+    border-radius: 8px 8px 0px 0px;
+    border-top: 1px solid rgb(230, 229, 229);
+    border-left: none;
+    border-right: none;
+  }
+  
+  .dropdown-link:last-of-type > a{
+    border-bottom: 1px solid rgb(230, 229, 229);
+    border-radius: 0px 0px 8px 8px;
+  }
+
+.dropdown-link i{
+    transform: rotate(-90deg);
+}
+
+.arrow{
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: -5.5px;
+    left: 32px;
+    border-top: 1px solid rgb(230, 229, 229);
+    border-left: 1px solid rgb(230, 229, 229);
+    background-color: rgb(21 21 25);
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: .3s;
+    z-index: -1;
+}
+
+.dropdown-link{
+    position: relative;
+}
+
+.nav-link:hover > .dropdown,
+.dropdown-link:hover > .dropdown{
+    transform: translate(0, 0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1.25s;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+/* The @media element with 'prefers-reduced-motion' disables the transition for anyone who does not want animations*/
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.image:nth-child(2) {
+    transition-delay: 80ms;
+}
+
+.image:nth-child(1) {
+    transition-delay: 120ms;
+}
