@@ -1,9 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
-@font-face {
-    font-family: "GeistMono";
-    src: url(fonts/GeistMono-Bold.ttf);
-}
 /* 
     Importing different fonts
     Top fonts are from the Google font API and the @font-face is a downloaded font which I put in the fonts folder
