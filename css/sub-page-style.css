@@ -217,7 +217,7 @@ main {
 
 .fiji {
     background-position: top;
-    background-image: url("/images/Fiji-coast.jpg");
+    background-image: url("../images/Fiji-coast.jpg");
 }
 
 .newzealand {
@@ -227,17 +227,17 @@ main {
 
 .rarotonga {
     background-position: top;
-    background-image: url("/images/Rarotonga-beachside.jpg");
+    background-image: url("../images/Rarotonga-beachside.jpg");
 }
 
 .singapore {
     background-position: center;
-    background-image: url("/images/Singapore-Marina-Bay-Sands.jpg");
+    background-image: url("../images/Singapore-Marina-Bay-Sands.jpg");
 }
 
 .vietnam {
     background-position: top;
-    background-image: url("/images/Vietnam-river.jpg");
+    background-image: url("../images/Vietnam-river.jpg");
 }
 /* The code above assigns an image from either unsplash or the images folder to each HTML page. Only the files with the class of the country will be affected.*/
 /* By coding it this way, it allows me to change the position of the background image*/
