@@ -12,17 +12,18 @@ body {
     overflow: hidden;
   }
   
-  #image-track {
+#image-track {
     display: flex;
     gap: 4vmin;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(0%, -50%); 
-    user-select: none; /* -- Prevent image highlighting -- */
-  }
+    user-select: none; /* Prevents image highlighting */
+}
+/* The #image-track id code styles the image tracks layout, padding and positioning*/
   
-  #image-track > .image {
+#image-track > .image {
     max-width: 40vmin;
     max-height: 56vmin;
     min-width: 40vmin;
@@ -30,7 +31,8 @@ body {
     object-fit: cover;
     object-position: 100% center;
     cursor: pointer;
-  }
+}
+/* This section of code targets the images inside of the image track and styles their size*/
   
 * {
     padding: 0;
@@ -167,12 +169,13 @@ header{
     border-top: 1px solid rgb(230, 229, 229);
     border-left: none;
     border-right: none;
-  }
+}
   
   .dropdown-link:last-of-type > a{
     border-bottom: 1px solid rgb(230, 229, 229);
     border-radius: 0px 0px 8px 8px;
-  }
+}
+/* The above 2 sections of code target the last element and the first element. The code gives the dropdown link a border radius and a outline*/
 
 .dropdown-link i{
     transform: rotate(-90deg);
@@ -209,19 +212,20 @@ header{
     transform: translateX(-100%);
     transition: all 1.25s;
 }
+/* All elements with the hidden class will be invisible until the intersection observer in JavaScript gives the elements the show class*/
 
 @media(prefers-reduced-motion) {
     .hidden {
         transition: none;
     }
 }
-
 /* The @media element with 'prefers-reduced-motion' disables the transition for anyone who does not want animations*/
 
 .show {
     opacity: 1;
     transform: translateX(0);
 }
+/* When elements are given the show class, they become visible on screen which a slight sliding transition*/
 
 .image:nth-child(2) {
     transition-delay: 80ms;
@@ -230,3 +234,5 @@ header{
 .image:nth-child(1) {
     transition-delay: 120ms;
 }
+
+/* This part of the code creates a delay on the animation of the cards, which creates a sliding in effect*/
